@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrega Extraordinaria Big Data</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #1f2937;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      background: #374151;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+    }
+    .placeholder {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    .cs {
+      background: #ecfeff;
+      border-left: 5px solid #06b6d4;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1f2937;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Entrega Extraordinaria Big Data</h1>
+  <p>AWS & Tableau</p>
+</header>
+
+<nav>
+  <a href="#intro">Introducción</a>
+  <a href="#sec1">Sección 1 – EC2</a>
+  <a href="#sec2">Sección 2 – Autoscaling</a>
+  <a href="#sec3">Sección 3 – Tableau</a>
+  <a href="#sec4">Sección 4 – Análisis</a>
+</nav>
+
+<main>
+
+<section id="intro">
+  <h2>Introducción</h2>
+  <p>
+    Este sitio web corresponde a la entrega extraordinaria de la asignatura <strong>Reto Intro al Big Data</strong>.
+    En él se documenta el proceso seguido para la creación de infraestructuras en AWS y el análisis de datos
+    mediante Tableau, incluyendo explicaciones y capturas de pantalla.
+  </p>
+</section>
+
+<section id="sec1">
+  <h2>Sección 1 – Servidor Web con Amazon EC2</h2>
+
+  <h3>Capturas de pantalla</h3>
+  <div class="cs">[CS01] Captura del menú de EC2 con el servidor web creado. <img src="seccion1/cs01.png" /></div>
+  <div class="cs">[CS02] Captura del navegador mostrando la página web (Hello World).<img src="seccion1/cs02.png" /></div>
+
+  <h3>Presupuesto mensual</h3>
+  <div class="placeholder">El coste de esta infraestructura es económico ya que simplemente montamos un servidor web con un hello world, deberíamos pagar la instancia y el almacenamiento, el monitoreo lo podríamos hacer de manera gratuita usando Amazon Cloudwatch y la transferencia de datos hasta el primer GB es gratuita, a partir del primer GB nos costaría 0,09$ por GB pero creo que para este proyecto con un GB mensual es más que suficiente. <ul>
+  <li>Instancia de Amazon EC2
+    <ul>
+      <li>t2.micro</li>
+      <li>Amazon Linux</li>
+      <li>US East</li>
+      <li>Precio 0,0104$/h x 730h = 7,59$ al mes</li>
+    </ul>
+  </li>
+  <li>Amazon EBS
+    <ul>
+      <li>8GB
+        <ul>
+          <li>0,10$/GB/mes = 0,80USD / mes</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul></div>
+</section>
+
+<section id="sec2">
+  <h2>Sección 2 – Arquitectura Autoescalada y Balanceada</h2>
+
+  <h3>Capturas de pantalla requeridas</h3>
+  <div class="cs">[CS01] Creación de la AMI.<img src="seccion2/cs01.png" /></div>
+  <div class="cs">[CS02] Infraestructura VPC creada.<img src="seccion2/cs02.png" /></div>
+  <div class="cs">[CS03] Elastic Load Balancer (ELB).<img src="seccion2/cs03.png" /></div>
+  <div class="cs">[CS04] Grupo de Auto Scaling.<img src="seccion2/cs04.png" /></div>
+  <div class="cs">[CS05] Alarmas en CloudWatch.<img src="seccion2/cs05.png" /></div>
+</section>
+
+<section id="sec3">
+  <h2>Sección 3 – Tableau: Dashboards y Story</h2>
+
+  <h3>Dashboards</h3>
+  <div class="cs">[CS06] Dashboard con valor máximo.</div>
+  <div class="cs">[CS07] Gráficos adicionales y explicación.<img src="seccion3/cs07-1.png" /><img src="seccion3/cs07-2.png" />
+  <li>El primer gráfico indica la diferencia entre bicis mecánicas y bicis eléctricas</li>
+  <li>El segundo indica el total de bicicletas y el estado de cada una</li>
+</div>
+  <div class="cs">[CS08] Dashboard final con filtros compartidos.</div>
+
+  <h3>Story</h3>
+  <div class="cs">[CS09] Capturas de la Story.<img src="seccion3/cs09-1.png" /></div>
+</section>
+
+<section id="sec4">
+  <h2>Sección 4 – Limpieza, Procesado y Análisis de Datos</h2>
+
+  <h3>Data Cleansing</h3>
+  <div class="cs">[CS10] Gráfico con filtros y valores nulos eliminados.</div>
+
+  <h3>Data Processing</h3>
+  <div class="cs">[CS11] Campo flag creado.</div>
+  <div class="cs">[CS12] Fórmula del campo calculado.</div>
+  <div class="cs">[CS13] Gráfico mostrando alertas.</div>
+
+  <h3>Data Analytics y Conclusiones</h3>
+  <div class="cs">[CS14] Estacionalidad.</div>
+  <div class="cs">[CS15] Pronóstico a futuro.</div>
+  <div class="cs">[CS16] Conclusiones finales.</div>
+</section>
+
+</main>
+
+<footer>
+  <p>Pau Agut - Extraordinaria Big Data - LaSalle FP Online</p>
+</footer>
+
+</body>
+</html>
